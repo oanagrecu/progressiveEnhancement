@@ -1,8 +1,6 @@
 Progressive enhancement
 
 - Create a public repository: `progressive-enhancement` 
-- Slides: [Progressive Enhancement](https://app.ludus.one/8c042d9a-e404-4df5-b14e-48e3eb6e6014)
-- Duration: 3 days
 
 ## 1. HTML is about semantics
 
@@ -19,7 +17,6 @@ To make proper HTML code, one must think not about the looks of the text, but of
 Two reasons :  **SEO** (your website's findability / visibility on Google) and **Accessibility** (make sure all humans, no matter their handicap (blindness, poor eyesight, colorblindness) can access the information.  
 
 #### 1.1 SEO
-:wq
 The ultimate goal of a search engine like Google is to return to a human the best possible results for what they have searched for (a few words). To do this, Google creates software such as **Googlebot**, which indexes content found on the web by following links from one page to another, from one site to another. (That's why we sometimes talk about *web spiders*).  
 
 Using powerful algorithms, Google reads and analyzes the HTML content of each page found, in order to "understand" what it is talking about thanks to its html structure (title, subtitle, list, etc.). This allows Google to determine what each page is about, and if it seems to match the search, it will return it to the user as one of the first results.
@@ -29,10 +26,9 @@ Using powerful algorithms, Google reads and analyzes the HTML content of each pa
 > Findability Precedes Usability
 > In the Alphabet and on the Web.
 > You Can't Use What You Can't Find.
-> – [Peter Morville](https://thatsthespir.it/quote/view/10)
 
 #### 1.2 Accessibility
-The web is a universal project: everyone must have access to content. Including the blind and visually impaired (you, one day). Blind people use "screen readers" that use html code to tell the story aloud. If your html code is not semantic, the page will not make much sense to listen to (even if it looks good). Feel free to[test on your own computer] (https://stackoverflow.com/a/43368748/53960).
+The web is a universal project: everyone must have access to content. Including the blind and visually impaired (you, one day). Blind people use "screen readers" that use html code to tell the story aloud. If your html code is not semantic, the page will not make much sense to listen to (even if it looks good).
 
 ### Semantic is actually pretty easy.
  
@@ -41,49 +37,25 @@ Semantics consists in choosing the right **tags** and **attributes** to represen
 #### Tags
 Tags are used to indicate the semantic function of a portion of content in "blocks". Most html blocks work with an opening tag and a closing tag.
 
-**Syntax example :**
-
-```html
-<p>This is a paragraph (hence the P letter).</p>
-```
-
 **Exercices :**  
 
 - Translate [this txt document](doc-the-chinese-farmer.txt) into semantic html, using the right html tags :  `h1`, `h2`, `blockquote`, `q`, `img`, `img`, `hr`, `figure` and `caption`, `table`, `th`, `tr`, `td`, `ul` or `ol` and`li`. 
 - No `div` or `span`: they do not provide any semantics. 
-- Find, for each of these tags, the origin of their name (that's how we remember them). If in doubt, look for the answer on [html5doctor.com](http://html5doctor.com).
+- Find, for each of these tags, the origin of their name (that's how we remember them).
 - Add two or three links of your choice in the html page via the tag `a`
 - Is there a part that could be considered as a header? If so, group it in a `header` tag. 
 - And a footer? If so, group this content together in a `footer` tag
 - Put all instances of the words "Maybe" in a  `em` or `strong` tag. 
 
 
-
-
 #### Html attributes
 They are used to define the characteristics of the tags.  Imagine that there is a "human" tag. 
 
-```html
-<p>
-Steven Paul Jobs, known as Steve Jobs, (San Francisco, February 24, 1955 - Palo Alto, October 5, 2011) is an entrepreneur...
-</p>
-```   
 
 We can, with attributes, describe this human being to differentiate him from others.
 
-```html
-<p class="human" name="Steve Job" nationality="USA" origin="Syria" job="CEO" company="Apple" hair="grey">
-Steven Paul Jobs, known as Steve Jobs, (San Francisco, February 24, 1955 - Palo Alto, October 5, 2011) is an entrepreneur...
-</p>
-```  
 
 In this way, by increasing the semantics of the tags with attributes, we have clarified for a machine that is this human being. 
-
-Here is a one-line summary of the syntax of tags, attributes and values:
-
-```html
-<tag attribute="value">content</tag> 
-``` 
 
 **Exercises :**  
 
@@ -94,47 +66,13 @@ Back to your  html version of the Chinese farmer :
 - Find the link attribute to indicate the page to which the link should lead, and add it.  
 - Make sure that when you click on the links, the page opens in a new browser tab.  
 - Find the attribute to display a small text box when hovering over links, like this: 
-  
-![Exemple](https://cdn.searchenginejournal.com/wp-content/uploads/2008/09/title-usability.jpg)
+ 
 	
 ## 2. CSS is to improve the visual look
 
 CSS is a computer language that allows you to control the visual aspect of your content.  For example, you can control the appearance of the text via these properties: `font-style`, `font-size`, `color`, `line-height`.
 
 In other words, if html allows you to structure content, **CSS allows you to put some makeup on it**, making it more visually attractive.
-
-### Syntax
-
-```css
-selector {
-	property :  value ;
-	property :  value ;
-	/* This is a comment */
-	property :  value ;
-	...
-}  
-```
-
-**Remarks :**
-
-- Each line must end with a `;`
-- You can declare as many properties as you want. You can even declare the same property twice. In this case, the last one will be taken into account (hence the term "*cascading*").
-- the stylized element is called "the selector". It is followed by a block containing one or more properties, enclosed in braces `{}`
-
-**Example**: What do you think this piece of code does?  
-
-```css
-p {
-	font-size: 12px;
-	font-family: Arial, sans-serif;
-	color: purple;
-}
-```
-
-For the browser to take it into account, your CSS must be either:
-
-- in your html file, in a `<style>` tag
-- in an external css file, linked to your html via the `<link>` tag
 
 
 ### Concept 1: CSS selectors
@@ -154,15 +92,6 @@ Back to your html version of the Chinese farmer :
  
 All tags are rendered visually as a "block". This is called the [box model](https://www.w3schools.com/css/css_boxmodel.asp).  Each block includes margin, padding border properties.
 
-![The bloc](css-block.png)  
-
-You can control the dimensions and spacing of this block:   
-
-- `width`/ `height` : width and height dimensions 
-- Border: controls the border. For example: `border:1px solid #FF0000;` creates an edge made of a solid red line `#FF0000` and 1px thick
-- `padding`: the space between the content of the block and its outline (the `border`). The padding "inflates" the block.  
-- Margin: the space around the block, outside it. The margin distances the block from its surroundings. You should know that these sometimes [collapse](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) but for now you don't have to worry too much about it, just know it exists. 
-
 
 **Exercises :**  
 
@@ -178,7 +107,7 @@ Back to your html version of the Chinese farmer :
 - The text of the quotations touches the border, it's not pretty. Add a 30px space between the border and the text of the quotation.  
 - Make sure that the quotes have an empty space of 80 pixels above and below.  
 - Find out how to add a background color to your body  
-- Change the background color to use a color gradient (go to [http://www.colinkeany.com/blend/](http://www.colinkeany.com/blend/))  
+- Change the background color to use a color gradient 
 - Add a background image to your body  
 - Make sure that the image does not repeat itself 
 - Change its positioning to `bottom right`  
@@ -207,10 +136,6 @@ Back to your html version of the Chinese farmer :
 
 #### All other selectors
  
--  `+` and `>` 
--  	Select via the attribute `[attribute]`
--   There are a few others. To get an idea of what they allow, go read the [W3Schools documentation](https://www.w3schools.com/cssref/css_selectors.asp), then play with [CSS Dinner](http://flukeout.github.io/)
-
 **Exercises**  
 
 Back to your html version of the Chinese farmer :
@@ -233,7 +158,6 @@ CSS allows you to define the visual positioning of the elements. It is probably 
 
 Each html block has a "display" property which is either: `display: inline | inline-block | block` and is displayed according to its order of appearance in the html file. This is called the **natural positioning flow** or more simply the **flow**.
 
-![Display explained](http://4.bp.blogspot.com/-TiwOixlooJk/U4UyEnv_XpI/AAAAAAAACFs/NuuLz2IvoZ4/s1600/css-display-block-vs-inline-block.png)
 
 ##### The flexbox model
 Flexbox is the commonly-used name for the CSS Flexible Box Layout Module, a layout model for displaying items in a single dimension — as a row or as a column.
@@ -250,8 +174,6 @@ Flexbox also enables alignment of items on the main or cross axis, thus providin
 Back to your html version of the Chinese farmer :
 
 - Make the text run around the images, using the `flexbox model` property on the images (adjusted with `justify-content` to distance the text from the image).   
-
-![flexbox](flexdisplay.png)
 
 #### Breaking the flow
 
@@ -283,18 +205,6 @@ By default, the browser uses the fonts installed on the client's computer. Howev
 - Check that your HTML allows **good organic SEO**, via other tools like the [Google Lighthouse Test](https://developers.google.com/web/tools/lighthouse/) 
 - Install [Emmet](https://emmet.io/) in your code editor.
 
-## 5. Exercises to finish this sprint
-If you have the time...
-- Reproduce as accurately as possible the following layouts:    
-	- [homepage of turlututu.com](turlututu.png)
-	- [CodeCollab homepage](activecollab.png)
-Create a repository for each project. Do not forget the description, the URL of the GitHub Page and the readme!
-
 ## Done ? 
-HURRAY, here is a gif ! 
-
-![](win.gif)
-
-:sparkling_heart:
-
+HURRAY! 
 
