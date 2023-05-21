@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ body{
+  font-family: 'Open Sans', sans-serif;
+  max-width: 90%;
+  margin: 0 auto;
+  padding:0;
+  font-size: 16px;
+  text-align: center;
+  background-color:rgb(187, 207, 231); 
+   background:linear-gradient(45deg, #b9d8f1,  #85b2d5); 
+   background-image:url(./images/blue-toned-collection-paper-sheets-with-copy-space.jpg) ;
+    background-size: cover;
+  /* background-position: right bottom;  */
+  background-repeat:no-repeat; 
+}
+h1{
+  padding-top: 40px;
+}
+/* styling the first p after the header */
+header+p{
+  line-height: 2.0rem;
+font-size: 20px;
+font-weight: bold;
+}
+/* styling a the header`s child */
+header blockquote{
+       margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      font-size:  1.6em;
+      font-style: italic;
+      background-color: #ffffdd;
+      border-left: 3px solid firebrick;
+      padding: 40px 20px 40px 20px; 
+      margin-top: 80px;
+      margin-bottom: 80px;
+}
+.human{
+  padding-top: 20px;
+  text-align: right;
+  font-style: italic;
+  font-size:1rem;
+  display: block;
+  padding-right: 10px;
+}
+p {
+    line-height: 2.0rem;
+    font-size: 20px;
+    color: #210e0e;
+} 
+
+  q {
+      /* text-align: center; */
+      /* margin-left: auto;
+      margin-right: auto; */
+      width: 50%;
+      font: size 1.6em;
+      font-style: italic;
+      background-color: rgb(216, 219, 222);
+      border-left: 3px solid firebrick;
+       padding-top: 80px;
+      padding-bottom: 80px; 
+      font-size: 1.2em;  
+  }
+
+  .good {
+    color: rgb(64, 169, 63); 
+    text-transform: capitalize;
+  }
+  
+  .bad {
+    color: red; 
+    text-transform: capitalize;
+  }
+/* styling the quotations */
+.farmers{
+  display:flex;
+  align-content: flex-start;
+padding-left: 30px;
+  border-left: 5px solid #479ad6;
+}
+.farmer{
+  display:flex;
+  align-content: flex-start;
+padding-left: 30px;
+  border-left: 5px solid rgb(64, 169, 63);
+}
+
+/* styling the section list */
+
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.section1a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+figure {
+  display: flex;
+  flex-flow: column;
+  flex-grow: 2;
+  margin: 2.5rem;
+  max-width: 400px;
+}
+
+figcaption {
+  background-color: #5e5b5b;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding: 3px 0;
+  text-align: center;
+}
+/* styling the list */
+.people li {
+  list-style: none;
+   padding: 1rem; 
+   font-size: 1.4em;
+}
+
+li:nth-child(1) {
+  background-image: url(./images/bien.png);
+  background-repeat: no-repeat;
+  background-position: right ;
+  padding-right: 50px;
+}
+li:nth-child(2) {
+  background-image: url(./images/mal.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 50px;
+ 
+}
+li:nth-child(3) {
+  background-image: url(./images/chat.png);
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 50px;
+}
+
+
+/* styling the blockquote */
+blockquote{
+  margin-left: auto;
+ margin-right: auto;
+ width: 50%;
+ font-size:  1.6em;
+ font-style: italic;
+ background-color:#ffffdd;
+ border-left: 3px solid firebrick;
+ padding: 40px 20px 40px 20px;
+ margin-top: 20px;
+ text-align: justify;
+
+}
+/* styling section 2 text & image */
+.section2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.section2 p{
+  text-align: justify;
+  line-height: 2.0rem;
+    font-size: 20px;
+}
+
+/* styling section3 dialogue & picture */
+.section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#title{
+font-size: 2em;
+}
+.section3 p {
+  line-height: 2.0rem;
+    font-size: 20px;
+    color: #210e0e;
+}
+
+.section3 figure {
+  width: 40rem;
+}
+.section3 img {
+  width: 400px;
+}
+/* styling section 4  table and conclusion*/
+
+.section4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px ;
+}
+.section4 h2{
+  margin:70px 0 40px 0;
+}
+
+/* styling the table */
+#dialog{
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%; 
+  padding: 10px 0 10px 0;
+  margin-top: 20px;
+  
+  }
+#dialog  td, #dialog th {
+  border: 1px solid #dbd6d6;
+  padding: 10px;
+  font-size: 20px;
+}
+
+#dialog  tr:nth-child(even){
+  background-color: #bcbaba;
+}
+#dialog thead tr{
+background-color:#bcbaba;
+}
+#dialog tr:hover {
+  background-color: #ddd;
+}
+.section4 footer{
+  margin-bottom: 40px;
+}
+/* styling the link */
+a {
+  color: #479ad6; 
+ text-decoration: none; 
+ } 
+ 
+a:hover {
+  color:rgb(64, 169, 63); 
+  text-decoration: underline; 
+}
+/* styling the footer */
+.footer{
+  background-color: #5f6162;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  padding: 10px 0 10px 0;
+  margin-top: 40px;
+  }
+/* styling the notification  */
+.notification {
+  background: #ffffdd;
+  padding: 0.5rem 1rem;
+  border: 3px solid #ddddcc;
+  width: 250px;
+  font-weight: bold;
+  color: #333300;
+  position: fixed;
+  right: 1rem;
+  bottom: 2%;
+} 
+.onTop{
+  position: fixed;
+  right: 1.5rem;
+  bottom: 17%;
+}
